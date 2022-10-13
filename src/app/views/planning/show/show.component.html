@@ -1,0 +1,46 @@
+<div class="row">
+<div class="col-lg-6">
+<div class="card">
+    <div class="card-body">
+      <h5 class="card-title">Créneaux de disponibilité</h5>
+
+      <div class="list-group" *ngFor="let hor of Horaires ; let i =index">
+    
+        <button type="button" class="list-group-item list-group-item-action">{{hor.date}} {{hor.deb}}</button>
+       
+      </div>
+
+    </div>
+  </div>
+
+  
+  </div>
+  <div class="col-lg-6">
+    <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Ajouter Horaire</h5>
+             <form [formGroup]="HoraireForm">
+                <div class="row mb-3">
+                    <label for="inputDate" class="col-sm-2 col-form-label">Date</label>
+                    <div class="col-sm-10">
+                      <input type="date" class="form-control" formControlName="date" [(ngModel)]="horaire.date">
+                    </div>
+                  </div>
+                  <div class="row mb-3">
+                    <label for="inputTime" class="col-sm-2 col-form-label" >Time</label>
+                    <div class="col-sm-10">
+                      <input type="time" class="form-control" formControlName="deb" [(ngModel)]="horaire.deb">
+                    </div>
+                  </div>
+                  <div class="text-center">
+                    <button type="submit" class="btn btn-primary" (click)="onSubmit(authServ.idUser)">Submit</button>
+                    <button type="reset" class="btn btn-secondary" (click)="onReset()">Reset</button>
+                  </div>
+             </form>
+
+        </div>
+    </div>
+    
+      
+   </div>
+</div>

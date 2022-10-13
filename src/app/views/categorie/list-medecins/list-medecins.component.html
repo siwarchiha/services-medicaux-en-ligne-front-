@@ -1,0 +1,21 @@
+ <!-- Card with an image on left -->
+ <div  *ngFor="let med of Medecins ; let i =index">
+ <div class="card mb-3" >
+    <div class="row g-0">
+    
+      <div class="col-md-12">
+        <div class="card-body">
+          <h5 class="card-title">{{med.nom}} {{med.prenom}}</h5>
+          <div class="card-text">
+
+            <app-horaire [id]="med.id"></app-horaire>
+
+          </div>
+        </div>
+        <div class="card-footer">
+          Prix téléconsultation : {{med.prix_consult}}
+          </div>
+      </div>
+    </div>
+  </div><!-- End Card with an image on left -->
+</div>

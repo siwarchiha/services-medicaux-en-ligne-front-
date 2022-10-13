@@ -1,0 +1,289 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>services hopitales</title>
+ <meta content="" name="description">
+  <meta content="" name="keywords">
+
+</head>
+<body>
+ 
+  <!-- ======= Top Bar ======= -->
+  <div id="topbar" class="d-flex align-items-center fixed-top">
+    <div class="container d-flex justify-content-between">
+      <div class="contact-info d-flex align-items-center">
+        <i class="bi bi-envelope"></i> <a href="mailto:contact@example.com">Medico@gamil.com</a>
+        <i class="bi bi-phone"></i> +216 55 895 548
+      </div>
+      <div class="d-none d-lg-flex social-links align-items-center">
+        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+
+      <h1 class="logo me-auto"><a href="/wlcm">Medilab</a></h1>
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#services">Services</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+              
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+      <a [routerLink]="['/login']" class="appointment-btn scrollto"><span class="d-none d-md-inline">Se Connecter</span> </a>
+
+    </div>
+  </header><!-- End Header -->
+
+  <section id="hero" class="d-flex align-items-center">
+    <div class="container">
+      <h1>Welcome to Medilab</h1>
+      <h2>S'inscrire a notre site c'est une excellente idée pour vous</h2>
+      <a [routerLink]="['/register_medecin']" class="btn-get-started scrollto">Medecin </a>
+       <a href="/inscriptioncheflabo" class="btn-get-started scrollto">Laboratoire</a>
+    </div>
+  </section><!-- End Hero -->
+
+
+    <!-- ======= Why Us Section ======= -->
+    <section id="why-us" class="why-us">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-4 d-flex align-items-stretch">
+            <div class="content">
+              <h3>Pourquoi choisir MEDILAB?</h3>
+              <p>
+                Parce que ma santé et la santé de mes proches n’ont pas de prix. Je profite des outils modernes et innovants dans le domaine de la santé</p>
+              <div class="text-center">
+                <a href="#" class="more-btn">S'avoir plus <i class="bx bx-chevron-right"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-8 d-flex align-items-stretch">
+            <div class="icon-boxes d-flex flex-column justify-content-center">
+              <div class="row">
+                <div class="col-xl-4 d-flex align-items-stretch">
+                  <div class="icon-box mt-4 mt-xl-0">
+                    <i class="bx bx-receipt"></i>
+                    <h4>Téléconsultation médicale</h4>
+                    <p>Consultez des médecins inscrits à l’ordre des médecins : examen de votre dossier ; discussion par messages avec médecin ; rendez-vous par vidéo avec médecin via ordinateur ; récupérez votre traitement en ligne.</p> </div>
+                </div>
+                <div class="col-xl-4 d-flex align-items-stretch">
+                  <div class="icon-box mt-4 mt-xl-0">
+                    <i class="bx bx-cube-alt"></i>
+                    <h4>Dossier Médical en ligne</h4>
+                    <p>Sauvegardez toutes vos informations de santés : vos analyses, vos radios, vos traitements, la courbe de poids,les allergies, etc. Gérez tout votre historique santé et vous pourrez partager à votre initiative avec votre médecin.</p>
+                  </div>
+                </div>
+                <div class="col-xl-4 d-flex align-items-stretch">
+                  <div class="icon-box mt-4 mt-xl-0">
+                    <i class="bx bx-images"></i>
+                    <h4>Réseau Social médical</h4>
+                    <p>Connectez-vous avec vos amis dans le réseau social médical inédit de la santé. Postez vos publications et questions. Interagissez avec une communauté de gens partageant vos soucis de santé et des professionnels.</p>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End .content-->
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Why Us Section -->
+
+
+    <!-- ======= Counts Section ======= -->
+    <section id="counts" class="counts">
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6">
+            <div class="count-box">
+              <i class="fas fa-user-md"></i>
+              <span data-purecounter-start="0" data-purecounter-end="85" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Medecins</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mt-5 mt-md-0">
+            <div class="count-box">
+              <i class="fas fa-hospital-user"></i>
+              <span data-purecounter-start="0" data-purecounter-end="18" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Patients</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mt-5 mt-lg-0">
+            <div class="count-box">
+              <i class="fas fa-flask"></i>
+              <span data-purecounter-start="0" data-purecounter-end="12" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Laboratoires</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Counts Section -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Services</h2>
+          <p>Profitez d’une banque d’informations de santé simples mais très utiles, produites spécialement pour vous par des médecins et des professionnels de la santé. Cultivez davantage vos connaissances sur le corps humain.</p></div>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div class="icon-box">
+              <div class="icon"><i class="fas fa-notes-medical"></i></div>
+              <h4><a href="">Medecin prive</a></h4>
+		  		<p>Medecins Ã  votre disposition pour une consultation video</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+            <div class="icon-box">
+              <div class="icon"><i class="fas fa-dna"></i></div>
+              <h4><a href="">Trouvez un laboratoire</a></h4>
+              <p>Laboratoires d'analyses:prenez votre rendez-vous au laboratoires</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
+            <div class="icon-box">
+              <div class="icon"><i class="fas fa-wheelchair"></i></div>
+              <h4><a href="">Magni Dolores</a></h4>
+              <p>La santé numérique est désormais incontournable. Elle répond à de nombreux besoins des patients, des médecins et des professionnels de santé : lutter contre la fracture numérique ; réduire les distances entre patients et médecins ; servir les pays lointains et les zones défavorisées ; offrir un service disponible toute la semaine pendant la journée et le soir ; etc.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+   
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Contact</h2>
+          <p>Nous sommes la pour vous aider a garder une bonne santé</p>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row mt-5">
+
+          <div class="col-lg-4">
+            <div class="info">
+              <div class="address">
+                <i class="bi bi-geo-alt"></i>
+                <h4>Location:</h4>
+                <p>A108 Adam Street, New York, NY 535022</p>
+              </div>
+
+              <div class="email">
+                <i class="bi bi-envelope"></i>
+                <h4>Email:</h4>
+                <p>Medico@gmail.com</p>
+              </div>
+
+              <div class="phone">
+                <i class="bi bi-phone"></i>
+                <h4>Telephone:</h4>
+                <p>+1 5589 55488 55s</p>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-8 mt-5 mt-lg-0">
+
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                </div>
+              </div>
+              <div class="form-group mt-3">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+              </div>
+              <div class="form-group mt-3">
+                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+              </div>
+              <div class="my-3">
+                <div class="loading">Chargement</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Votre message est bien transféré. Merci!</div>
+              </div>
+              <div class="text-center"><button type="submit">Message Envoyé</button></div>
+            </form>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="container d-md-flex py-4">
+
+      <div class="me-md-auto text-center text-md-start">
+        <div class="copyright">
+          &copy; Copyright <strong><span>Medilab</span></strong>. All Rights Reserved
+        </div>
+        <div class="credits">
+          <!-- All the links in the footer should remain intact. -->
+          <!-- You can delete the links only if you purchased the pro version. -->
+          <!-- Licensing information: https://bootstrapmade.com/license/ -->
+          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/medilab-free-medical-bootstrap-theme/ -->
+          Designed by <a href="https://bootstrapmade.com/">LBRM</a>
+        </div>
+      </div>
+      <div class="social-links text-center text-md-right pt-3 pt-md-0">
+        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+
+  <!-- Vendor JS Files -->
+  <script src="../assets/vendor/purecounter/purecounter.js"></script>
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="../assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

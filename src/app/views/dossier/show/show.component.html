@@ -1,0 +1,81 @@
+<section class="section dashboard">
+
+    <div class="row">
+    
+        <!-- Left side columns -->
+        <div class="col-lg-8">
+          <div class="row">
+    
+            <!-- Sales Card -->
+            <div class="col-xxl-4 col-md-6"  >
+              <div class="card info-card sales-card">
+    
+                <div class="filter">
+                  <a class="icon"  [routerLink]="['/acceuil','dossier','list_analyses',id_doss]" ><i class="fas fa-eye"></i></a>
+                  
+                </div>
+    
+                <div class="card-body" >
+                  <h5 class="card-title"></h5>
+    
+                  <div class="d-flex align-items-center">
+                    <div class="ps-3">
+                        <a class="icon"> <div><i class="fas fa-user-md"><h6>Analyses</h6></i></div></a>
+
+    
+                    </div>
+                  </div>
+                </div>
+    
+              </div>
+            </div><!-- End Sales Card -->
+            <!-- Sales Card -->
+            <div class="col-xxl-4 col-md-6"  >
+                <div class="card info-card sales-card">
+      
+                  <div class="filter">
+                    <a class="icon"  [routerLink]="['/acceuil','dossier','list_antecedents',id_doss]" ><i class="fas fa-eye"></i></a>
+                    
+                  </div>
+      
+                  <div class="card-body" >
+                    <h5 class="card-title"></h5>
+      
+                    <div class="d-flex align-items-center">
+                      <div class="ps-3">
+                        <a class="icon"  ><div><i class="fas fa-heartbeat"><h6>Antécedents</h6></i></div></a>
+
+      
+                      </div>
+                    </div>
+                  </div>
+      
+                </div>
+              </div><!-- End Sales Card -->
+              <!-- Sales Card -->
+            <div class="col-xxl-4 col-md-6"  >
+                <div class="card info-card sales-card">
+      
+                  <div class="filter">
+                    <a class="icon"  [routerLink]="['/acceuil','dossier','list_consultations',id_doss]" ><i class="fas fa-eye"></i></a>
+                    
+                  </div>
+      
+                  <div class="card-body" >
+                    <h5 class="card-title"></h5>
+      
+                    <div class="d-flex align-items-center">
+                      <div class="ps-3">
+                        <a class="icon" ><div><i class="fas fa-allergies"><h6>Consultations</h6></i></div></a>
+
+      
+                      </div>
+                    </div>
+                  </div>
+      
+                </div>
+              </div><!-- End Sales Card -->
+            </div>
+        </div>
+    </div>
+</section>

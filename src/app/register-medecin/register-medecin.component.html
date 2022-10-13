@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+ 
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  
+</head>
+<body>
+<main>
+    <div class="container">
+
+      <section class="section register min-vh-100 d-flex flex-column align-items-center justify-content-center py-4">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-4 col-md-6 d-flex flex-column align-items-center justify-content-center">
+
+              <div class="card mb-3">
+
+                <div class="card-body">
+
+                  <div class="pt-4 pb-2">
+                    <h5 class="card-title text-center pb-0 fs-4">Inscrivez-vous dès maintenant !</h5>
+                  </div>
+
+                 <!-- <form class="row g-3 needs-validation" action="register_user" method="POST" novalidate>-->
+                    <form class="row g-3 needs-validation" name="form_register" [formGroup]="registerForm" (ngSubmit)="onSubmit()">      
+                        
+                    <div class="col-12">
+                        <div class="form-group">
+                        <label for="yourPassword" class="form-label">Matricule</label>
+                        <input type="text" name="matricule" class="form-control" id="matricule" formControlName="matricule" [(ngModel)]="medecin.matricule" [ngClass]="{ 'is-invalid': submitted && f.matricule.errors }" >
+                      <!--  <div class="invalid-feedback">Veuillez entrer votre mot de passe!</div> -->
+                            <div *ngIf="submitted && f.matricule.errors" class="invalid-feedback">
+                                <div *ngIf="f.matricule.errors.required">le matricule est obligatoire</div>
+                            </div>
+                        </div>
+                    </div>
+
+                        <div class="col-12">
+                            <div class="form-group">
+                            <label for="yourPassword" class="form-label">Nom</label>
+                            <input type="text" name="nom" class="form-control" id="nom" formControlName="nom" [(ngModel)]="medecin.nom" [ngClass]="{ 'is-invalid': submitted && f.nom.errors }" >
+                          <!--  <div class="invalid-feedback">Veuillez entrer votre mot de passe!</div> -->
+                          <div *ngIf="submitted && f.nom.errors" class="invalid-feedback">
+                            <div *ngIf="f.nom.errors.required">le nom est obligatoire</div>
+                          </div>
+                            </div>
+                          </div>
+                          <div class="col-12">
+                            <div class="form-group">
+                            <label for="yourPassword" class="form-label">Prenom</label>
+                            <input type="text" name="prenom" class="form-control" id="prenom" formControlName="prenom" [(ngModel)]="medecin.prenom" [ngClass]="{ 'is-invalid': submitted && f.prenom.errors }" >
+                          <!--  <div class="invalid-feedback">Veuillez entrer votre mot de passe!</div> -->
+                          <div *ngIf="submitted && f.prenom.errors" class="invalid-feedback">
+                            <div *ngIf="f.prenom.errors.required">le prenom est obligatoire</div>
+                          </div>
+                            </div>
+                          </div>
+
+                          <div class="col-12">
+                            <div class="form-group">
+                            <label for="sexe" class="form-label">Sexe</label>
+                            <input type="text" name="sexe" class="form-control" id="sexe" formControlName="sexe" [(ngModel)]="medecin.sexe" [ngClass]="{ 'is-invalid': submitted && f.sexe.errors }" >
+                          <!--  <div class="invalid-feedback">Veuillez entrer votre mot de passe!</div> -->
+                                <div *ngIf="submitted && f.sexe.errors" class="invalid-feedback">
+                                    <div *ngIf="f.sexe.errors.required">le sexe est obligatoire</div>
+                                </div>
+                            </div>
+                        </div>
+ 
+                        <div class="col-12">
+                            <div class="form-group">
+                            <label for="specialite" class="form-label">Specialité</label>
+                            <select type="text" name="specialite" class="form-control" id="specialite" formControlName="specialite" [(ngModel)]="medecin.specialite" [ngClass]="{ 'is-invalid': submitted && f.specialite.errors }" >
+                          <!--  <div class="invalid-feedback">Veuillez entrer votre mot de passe!</div> -->
+                                <div *ngIf="submitted && f.specialite.errors" class="invalid-feedback">
+                                    <div *ngIf="f.specialite.errors.required">la specialité est obligatoire</div>
+                                </div>
+                                <option></option>
+                                <option  *ngFor="let sp of specialites" >{{sp.nom}}</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <div class="form-group">
+                            <label for="prix" class="form-label">Prix consultation</label>
+                            <input type="number" name="prix_consult" class="form-control" id="prix_consult" formControlName="prix_consult" [(ngModel)]="medecin.prix_consult" [ngClass]="{ 'is-invalid': submitted && f.prix_consult.errors }" >
+                          <!--  <div class="invalid-feedback">Veuillez entrer votre mot de passe!</div> -->
+                                <div *ngIf="submitted && f.prix_consult.errors" class="invalid-feedback">
+                                    <div *ngIf="f.prix_consult.errors.required">le prix de consultation est obligatoire</div>
+                                </div>
+                            </div>
+                        </div>
+
+                    <div class="col-12">
+                      <label for="yourUsername" class="form-label">Email</label>
+                      <div class="form-group">
+                      <div class="input-group has-validation">
+                        <span class="input-group-text" id="inputGroupPrepend">@</span>
+                        <input type="email"  class="form-control" formControlName="email" id="email" [(ngModel)]="medecin.email"  [ngClass]="{ 'is-invalid': submitted && f.email.errors }" >
+                       <!-- <div class="invalid-feedback">Veuillez entrer votre adresse email.</div>-->
+                       <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                        <div *ngIf="f.email.errors.required">l'adresse email est obligatoire</div>
+                      </div>
+                      </div>
+                    </div>
+                  </div>
+
+                    <div class="col-12">
+                      <div class="form-group">
+                      <label for="yourPassword" class="form-label">Mot de passe</label>
+                      <input type="password" name="password" class="form-control" id="password" formControlName="password" [(ngModel)]="medecin.password" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" >
+                    <!--  <div class="invalid-feedback">Veuillez entrer votre mot de passe!</div> -->
+                    <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                      <div *ngIf="f.password.errors.required">le mot de passe est obligatoire</div>
+                    </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12">
+                      <button class="btn btn-primary w-100" type="submit">Inscription</button>
+                    </div>
+                    
+                  </form>
+
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+    </div>
+  </main><!-- End #main -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+ 
+</body>
+</html>
